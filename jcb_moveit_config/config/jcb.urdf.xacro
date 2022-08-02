@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="jcb">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import jcb urdf file -->
+    <xacro:include filename="$(find jcb_description)/jcb_description.urdf" />
+
+    <!-- Import jcb ros2_control description -->
+    <xacro:include filename="jcb.ros2_control.xacro" />
+
+    <xacro:jcb_ros2_control name="JcbFakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+</robot>

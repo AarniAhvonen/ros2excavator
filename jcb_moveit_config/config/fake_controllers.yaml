@@ -1,0 +1,9 @@
+controller_names:
+    - arm_controller
+fake_arm_controller:
+    joints:
+      - Joint_1
+      - Joint_2
+      - Joint_3
+initial:
+   arm: lift
